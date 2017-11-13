@@ -1,5 +1,6 @@
 package com.example.a1kayat34.session1app;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -29,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public boolean onOptionsItemSelected(MenuItem item){
+        if(item.getItemId()==R.id.actionSave){
+            new AlertDialog.Builder(this).setPositiveButton("OK", null).setMessage("saving...").show();
+            return true;
+
+        }
         return true;
     }
 }
